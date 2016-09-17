@@ -8,7 +8,7 @@
     {
       "matches": ["https://www.google.com/*", "http://www.google.com/*"],
       "css": ["xkcd.css"],
-      "js": ["jquery.js", "bloodhound.js", "xkcd.js", "xkcd-injector.js"]
+      "js": ["jquery.js", "bloodhound.js", "xkcd.js", "xkcd-injector.js", "content.js"]
     }
   ]
 }

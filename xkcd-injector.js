@@ -12,6 +12,9 @@ function initialize(){
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.alt)
     });
+
+    setTimeout(inject, 100);
+    //jQuery(window).load(inject);
 }
 
-initialize();
+jQuery(initialize);
