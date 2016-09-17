@@ -1,0 +1,14 @@
+{
+  "name": "xkcd-d",
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "description": "A plain text description",
+  "author": "Brandon Drumheller, Sam Wenninger, & John Drogo",
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*", "http://www.google.com/*"],
+      "css": ["xkcd.css"],
+      "js": ["jquery.js", "bloodhound.js", "xkcd.js", "xkcd-injector.js"]
+    }
+  ]
+}
