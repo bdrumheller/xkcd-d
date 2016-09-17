@@ -16,5 +16,4 @@ function initialize(){
     setTimeout(inject, 100);
     //jQuery(window).load(inject);
 }
-
 jQuery(initialize);

@@ -10,5 +10,8 @@
       "css": ["xkcd.css"],
       "js": ["jquery.js", "bloodhound.js", "xkcd.js", "xkcd-injector.js", "content.js"]
     }
-  ]
+  ],
+  "browser_action": {
+      "default_icon" : "xkcd.png"
+  }
 }
