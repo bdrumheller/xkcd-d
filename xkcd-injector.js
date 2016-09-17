@@ -15,3 +15,5 @@ function initialize(){
 }
 
 initialize();
+
+console.log(hound);
