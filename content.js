@@ -1,4 +1,4 @@
-function inject() {
+function inject(browser) {
     function sync(datums) {
         var url;
         if (datums.length) {
@@ -10,8 +10,18 @@ function inject() {
                     <p>${datums[0].alt}</p>
                 </section>
             </div>`
-            jQuery(".appbar").after(content);
+            if (browser == "google") {
+                jQuery(".appbar").after(content);
+            }
+            else if (browser == "bing") {
+                jQuery("#b_tween").after(content);
+            }
         }
     }
-    hound.search($("#lst-ib").val(), sync)
+    if (browser == "google") {
+        hound.search($("#lst-ib").val(), sync)
+    }
+    else if (browser == "bing") {
+        hound.search($(".b_searchbox").val(), sync)
+    }
 }

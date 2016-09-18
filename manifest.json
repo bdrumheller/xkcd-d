@@ -1,12 +1,17 @@
 {
-  "name": "xkcd-d",
+  "name": "xkcd'd",
   "manifest_version": 2,
-  "version": "0.0.1",
-  "description": "A plain text description",
+  "version": "0.0.2",
+  "icons": {
+    "16": "xkcd.png",
+    "48": "xkcd.png",
+    "128": "xkcd.png"
+  },
+  "description": "Get XKCD articles presented to you automatically based on what you are currently searching in Google or Bing",
   "author": "Brandon Drumheller, Sam Wenninger, & John Drogo",
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/*", "http://www.google.com/*"],
+      "matches": ["https://www.google.com/*", "http://www.google.com/*", "https://www.bing.com/*", "http://www.bing.com/*"],
       "css": ["xkcd.css", "bootstrap.min.css"],
       "js": ["jquery.js", "bootstrap.min.js", "bloodhound.js", "xkcd.js",  "content.js", "xkcd-injector.js"]
     }
