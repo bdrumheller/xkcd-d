@@ -1,3 +1,19 @@
+function america(browser) {
+    var r = confirm("Are you sure you are American enough?!?")
+    if (r == true) {
+        if (browser == "google") {
+            var content = "<iframe src='localhost'></iframe>"
+            jQuery(".appbar").after(content);
+        }
+        console.log("true")
+        return true
+    }
+    else {
+        console.log("false")
+        return false
+    }
+}
+
 function inject(browser) {
     function sync(datums) {
         var url;
@@ -19,6 +35,9 @@ function inject(browser) {
         }
     }
     if (browser == "google") {
+        if ($("#lst-ib").val() == "'merica") {
+            america("google")
+        }
         hound.search($("#lst-ib").val(), sync)
     }
     else if (browser == "bing") {
