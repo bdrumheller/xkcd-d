@@ -19,8 +19,9 @@ function initialize(){
     hound = new Bloodhound({
         local: dataSet,
         identify: dataPoint => dataPoint.num,
+        sorter: (a, b) => a.num > b.num ? -1 : 1,
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.name).concat(Bloodhound.tokenizers.whitespace(dataPoint.alt))
+        datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.title).concat(Bloodhound.tokenizers.whitespace(dataPoint.alt).concat())
     });
     setInterval(oktoinject, 300)
 }

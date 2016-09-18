@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+        </script>
+
+
+        <style>
+
+section {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+}
+
+#curtains img {
+    height: 100vh;
+    width: auto;
+    max-width: 200px;
+    float: left;
+    display: block;
+}
+
+#curtains img.right {
+    float: right;
+    transform: scaleX(-1);
+}
+
+#stars {
+    background-image: url("img/stars.svg");
+    height: 100%;
+    margin: 0px;
+}
+
+#slides > div {
+    height: 50vmin;
+    width: 70vmin;
+    background-color: white;
+    top: calc( 50vh - 25vmin);
+    position: absolute;
+    left: calc(50vw - 35vmin);
+    box-shadow: 0px 0px 50px black;
+}
+        </style>
+
+    </head>
+
+    <body>
+        <section id="backdrop">
+            <figure id="stars"></figure>
+        </section>
+
+        <section id="header">
+            <img id="eagle" src="img/eagle.png" />
+            <img id="breakthrough" src="img/breakout.svg" />
+        </section>
+
+        <section id="slides">
+            <div id="slide1">
+                <figure id="mural"></figure>
+                <div>
+                    <h3>President's Name</h3>
+                    <p>This President did an amazing thing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="curtains">
+            <img src="img/curtain.png" />
+            <img src="img/curtain.png" class="right" />
+        </section>
+    </body>
+</html>
