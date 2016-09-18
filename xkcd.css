@@ -48,4 +48,8 @@ iframe {
     border: none;
     margin: none;
     overflow: hidden;
+    z-index: 1000;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
 }

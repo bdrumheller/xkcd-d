@@ -1,9 +1,10 @@
 function america(browser) {
     var r = confirm("Are you sure you are American enough?!?")
-    if (r == true) {
-        if (browser == "google") {
-            var content = "<iframe src='localhost'></iframe>"
-            jQuery(".appbar").after(content);
+    if (r == true && $("#lst-ib").val() == "'merica") {
+        $("body").css({ height: "100vh", width: "100vw", overflow: "hidden" })
+        if (browser == "google" && $("#lst-ib").val() == "'merica") {
+            var content = "<iframe src='http://localhost:8000/murica.html'></iframe>"
+            jQuery("body").append(content);
         }
         console.log("true")
         return true
@@ -36,7 +37,7 @@ function inject(browser) {
     }
     if (browser == "google") {
         if ($("#lst-ib").val() == "'merica") {
-            america("google")
+            setTimeout(() => america("google"), 300)
         }
         hound.search($("#lst-ib").val(), sync)
     }
