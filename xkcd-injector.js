@@ -38,7 +38,7 @@ function initialize(){
         local: dataSet,
         identify: dataPoint => dataPoint.num,
         queryTokenizer: Bloodhound.tokenizers.whitespace,
-        datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.alt)
+        datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.name).concat(Bloodhound.tokenizers.whitespace(dataPoint.alt))
     });
     setInterval(oktoinject, 300)
 }

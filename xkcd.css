@@ -1,4 +1,35 @@
+#collapse {
+    background-color: #eee;
+    padding: 2em;
+    text-align: center;
+    margin: 0em 0em 2em;
+}
+
+#collapse section {
+    padding-left: 8vh;
+    width: 50%;
+    max-width: 500px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#collapse section h3 {
+    font-size: 2vh;
+}
+
+#collapse section p {
+    padding-top: 2vh;
+    font-size: 1.5vh;
+}
+
+#date {
+    font-style: italic;
+}
+
 #xkcd {
-    display: block;
-    margin: auto;
+    max-height: 35vh;
+    max-width: calc( 50% - 8em );
+    vertical-align: middle;
+    width: auto;
 }
