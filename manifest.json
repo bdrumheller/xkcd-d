@@ -7,8 +7,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.google.com/*", "http://www.google.com/*"],
-      "css": ["xkcd.css"],
-      "js": ["jquery.js", "bloodhound.js", "xkcd.js", "xkcd-injector.js", "content.js"]
+      "css": ["xkcd.css", "bootstrap.min.css"],
+      "js": ["jquery.js", "bootstrap.min.js", "bloodhound.js", "xkcd.js", "xkcd-injector.js", "content.js"]
     }
   ],
   "browser_action": {

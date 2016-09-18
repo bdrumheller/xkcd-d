@@ -1,3 +1,4 @@
-/*
-    Insert extra style.
-*/
+#xkcd {
+    display: block;
+    margin: auto;
+}

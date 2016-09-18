@@ -13,7 +13,7 @@ function initialize(){
         datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.alt)
     });
 
-    setTimeout(inject, 100);
+    setTimeout(inject, 1000);
     //jQuery(window).load(inject);
 }
 jQuery(initialize);
