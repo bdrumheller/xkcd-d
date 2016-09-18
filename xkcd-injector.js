@@ -4,6 +4,16 @@
 
 var dataSet;
 var hound;
+
+var lastvalue
+function oktoinject(){
+    if ($("#lst-ib").val() !== lastvalue){
+        lastvalue = $("#lst-ib").val()
+        jQuery('#collapse').remove()
+        inject()
+    }
+}
+
 function initialize(){
     dataSet = wrapper();
     hound = new Bloodhound({
@@ -12,8 +22,6 @@ function initialize(){
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.alt)
     });
-
-    setTimeout(inject, 1000);
-    //jQuery(window).load(inject);
+    setInterval(oktoinject, 300)
 }
 jQuery(initialize);
