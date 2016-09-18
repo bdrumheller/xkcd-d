@@ -7,7 +7,15 @@ var hound;
 
 var lastvalue
 
-function oktoinject(browser){
+function oktoinject(){
+    var bingPattern = /bing/i;
+    var googlePattern = /google/i;
+    if (googlePattern.test(window.location.href)) {
+        browser = "google"
+    }
+    else if (bingPattern.test(window.location.href)) {
+        browser = "bing"
+    }
     if (browser == "google") {
         if ($("#lst-ib").val() !== lastvalue){
             lastvalue = $("#lst-ib").val()
@@ -15,7 +23,7 @@ function oktoinject(browser){
             inject(browser)
         }
     }
-    if (browser == "bing") {
+    else if (browser == "bing") {
         if ($(".b_searchbox").val() !== lastvalue){
             lastvalue = $(".b_searchbox").val()
             jQuery('#collapse').remove()
@@ -32,13 +40,6 @@ function initialize(){
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         datumTokenizer: dataPoint => Bloodhound.tokenizers.whitespace(dataPoint.alt)
     });
-    var bingPattern = /bing/i;
-    var googlePattern = /google/i;
-    if (googlePattern.test(window.location.href)) {
-        setInterval(oktoinject("google"), 300)
-    }
-    else if (bingPattern.test(window.location.href)) {
-        setInterval(oktoinject("bing"), 300)
-    }
+    setInterval(oktoinject, 300)
 }
 jQuery(initialize);

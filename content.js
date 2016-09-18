@@ -1,6 +1,5 @@
 function inject(browser) {
     function sync(datums) {
-        console.log(browser)
         var url;
         if (datums.length) {
             url = datums[0].img;
