@@ -1,8 +1,8 @@
 {
-  "name": "xkcd-d",
+  "name": "xkcd'd",
   "manifest_version": 2,
-  "version": "0.0.1",
-  "description": "A plain text description",
+  "version": "0.0.2",
+  "description": "Get XKCD articles presented to you automatically based on what you are currently searching in Google or Bing",
   "author": "Brandon Drumheller, Sam Wenninger, & John Drogo",
   "content_scripts": [
     {
