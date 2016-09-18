@@ -426,14 +426,14 @@ section {
     box-shadow: 0px 0px 50px black;
 }
 
-#slides > div:nth-of-type(49) {
+#slides > #slide49 {
     background-color: black;
 }
-#slides > div:nth-of-type(49) #mural{
+#slides > #slide49 #mural{
     margin: auto;
     float: none;
 }
-#slides > div:nth-of-type(49) #details{
+#slides > #slide49 #details{
     display: none
 }
 
@@ -485,6 +485,16 @@ section {
     padding: 1em;
     overflow-y: scroll;
 }
+
+#president-number {
+    position: absolute;
+    bottom: 0px;
+    z-index: 100;
+    color: navy;
+    text-align: center;
+    width: 100vw;
+    font-size: 2em;
+}
         </style>
 
 <script>
@@ -505,9 +515,10 @@ function nextSlide(){
     </div>`
 
     $("#slides").append(slide)
+    $("#president-number").text(`${currentSlide}/49`)
     $(`#slides #slide${currentSlide-1} #mural`).trigger("zoom.destroy");
     $(`#slides #slide${currentSlide-1}`).addClass("left");
-    if (currentSlide == presidents.length){ setTimeout(FIREWORKS, 2000) }
+    if (currentSlide === 49){ setTimeout(FIREWORKS, 2000) }
     else { $(`#slides #slide${currentSlide} #mural`).zoom({ magnify: 5 }); }
     setTimeout(function (){document.getElementById(`slide${currentSlide}`).classList.remove("right")}, 100)
 }
@@ -516,6 +527,7 @@ function nextSlide(){
 function prevSlide(){
     if (currentSlide <= 1){ return }
     currentSlide--
+    $("#president-number").text(`${currentSlide}/49`)
     $(`#slides #slide${currentSlide+1} #mural`).trigger("zoom.destroy");
     $(`#slides #slide${currentSlide+1}`).addClass("right");
     $(`#slides #slide${currentSlide} #mural`).zoom({ magnify: 5 });
@@ -563,6 +575,7 @@ function keydown(e){
                     </div>
                 </div>
             </section>
+            <div id="president-number">1/49</div>
             <img src="img/curtain.png" />
             <img src="img/curtain.png" class="right" />
         </section>
