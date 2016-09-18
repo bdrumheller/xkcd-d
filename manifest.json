@@ -6,7 +6,7 @@
   "author": "Brandon Drumheller, Sam Wenninger, & John Drogo",
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/*", "http://www.google.com/*"],
+      "matches": ["https://www.google.com/*", "http://www.google.com/*", "https://www.bing.com/*", "http://www.bing.com/*"],
       "css": ["xkcd.css", "bootstrap.min.css"],
       "js": ["jquery.js", "bootstrap.min.js", "bloodhound.js", "xkcd.js",  "content.js", "xkcd-injector.js"]
     }
