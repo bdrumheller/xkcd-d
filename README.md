@@ -14,6 +14,6 @@
 9. Enjoy!
 
 ##How to Use
-* Once xkcd'd is enabled, simply search with either Google or Bing and xkcd articles will automatically appear if they exists one that is relevant to your search
+* Once xkcd'd is enabled, simply search with either Google or Bing and xkcd articles will automatically appear if there exists one that is relevant enough to your search.
 
 
