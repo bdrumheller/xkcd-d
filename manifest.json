@@ -12,9 +12,12 @@
   "content_scripts": [
     {
       "matches": ["https://www.google.com/*", "http://www.google.com/*", "https://www.bing.com/*", "http://www.bing.com/*"],
-      "css": ["xkcd.css", "bootstrap.min.css"],
-      "js": ["jquery.js", "bootstrap.min.js", "bloodhound.js", "xkcd.js",  "content.js", "xkcd-injector.js"]
+      "css": ["xkcd/xkcd.css", "xkcd/bootstrap.min.css"],
+      "js": ["js/jquery.js", "js/bootstrap.min.js", "js/bloodhound.js", "xkcd/xkcd.js",  "xkcd/content.js", "xkcd/xkcd-injector.js"]
     }
+  ],
+  "web_accessible_resources": [
+    "murica/*"
   ],
   "browser_action": {
       "default_icon" : "xkcd.png"

@@ -3,8 +3,9 @@ function america(browser) {
     if (r == true && $("#lst-ib").val() == "'merica") {
         $("body").css({ height: "100vh", width: "100vw", overflow: "hidden" })
         if (browser == "google" && $("#lst-ib").val() == "'merica") {
-            var content = "<iframe src='http://localhost:8000/murica.html'></iframe>"
+            var content = "<iframe id='merica' src="+chrome.runtime.getURL("murica/murica.html")+"></iframe>"
             jQuery("body").append(content);
+            jQuery("#merica").focus()
         }
         console.log("true")
         return true
